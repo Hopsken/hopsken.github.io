@@ -4,14 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hopsken</title>
+  <title>记第一次十公里跑 | Hopsken</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hopsken">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="前言　　说来惭愧，当我写下这个题目的时候我已经快一个星期没有跑步了ಠ_ಠ 。之所以会写下这篇短文，一是和大家分享一下我跑步的经历；其次呢，是想要借此机会顺利度过所谓的“厌跑期”。
+　　我是从新年过后才开始跑步的，到现在为止差不多一个多月了。差不多每周跑四次，每次至少五公里。截止目前，累计距离72.44公里，跑步记录14次。所以，我目前最多只能算是一个初级跑者。现在的目标是半年内完成一次半程马拉松，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记第一次十公里跑">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/1000m-running/index.html">
 <meta property="og:site_name" content="Hopsken">
+<meta property="og:description" content="前言　　说来惭愧，当我写下这个题目的时候我已经快一个星期没有跑步了ಠ_ಠ 。之所以会写下这篇短文，一是和大家分享一下我跑步的经历；其次呢，是想要借此机会顺利度过所谓的“厌跑期”。
+　　我是从新年过后才开始跑步的，到现在为止差不多一个多月了。差不多每周跑四次，每次至少五公里。截止目前，累计距离72.44公里，跑步记录14次。所以，我目前最多只能算是一个初级跑者。现在的目标是半年内完成一次半程马拉松，">
+<meta property="og:updated_time" content="2016-10-04T10:16:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hopsken">
+<meta name="twitter:title" content="记第一次十公里跑">
+<meta name="twitter:description" content="前言　　说来惭愧，当我写下这个题目的时候我已经快一个星期没有跑步了ಠ_ಠ 。之所以会写下这篇短文，一是和大家分享一下我跑步的经历；其次呢，是想要借此机会顺利度过所谓的“厌跑期”。
+　　我是从新年过后才开始跑步的，到现在为止差不多一个多月了。差不多每周跑四次，每次至少五公里。截止目前，累计距离72.44公里，跑步记录14次。所以，我目前最多只能算是一个初级跑者。现在的目标是半年内完成一次半程马拉松，">
   
     <link rel="alternative" href="/atom.xml" title="Hopsken" type="application/atom+xml">
   
@@ -139,9 +146,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-1000m-running" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-1000m-running" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -150,8 +155,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/27/1000m-running/">记第一次十公里跑</a>
+    <h1 class="article-title" itemprop="name">
+      记第一次十公里跑
     </h1>
   
 
@@ -196,132 +201,64 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-LOLGel" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/25/LOLGel/">Python -- 使用第三方API查看LOL玩家数据</a>
-    </h1>
   
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>额，之所以会写这个脚本嘛，首先是因为晚自习实在无聊，其次因为舍友天天都在玩LOL，刚好今天下午看到有别人做的LOL的<a href="http://api.xunjob.cn/" target="_blank" rel="external">API</a>。于是，就顺手写了这个脚本。实现原理很简单，没什么可说的，只用到了Python的Requests库。说起来，Requests真心很好用啊 😄</p>
-<p>代码如下:</p>
-<pre>
-#-*- coding: utf-8 -*-
-#LOLGel
-#Version: 0.0.1
-#Authored By Hopsken
-#Website: https://7pp.org
-
-import requests
-
-serverName = raw_input("> 请输入服务器大区名称...")
-playerName = raw_input("> 请输入召唤师昵称...")
-
-payload = {'serverName': '皮城警备', 'playerName': '龙龙瞎'}
-payload["serverName"] = serverName
-payload["playerName"] = playerName
-
-print "\n"
-print "服务器大区：", serverName, "召唤师：", playerName, "\n"
-
-record = requests.get('http://API.xunjob.cn/Record.php', params=payload).json()['Record']
-print "比赛记录: "
-print record
-print "\n"
-
-playerInfo = requests.get('http://API.xunjob.cn/playerinfo.php', params=payload).json()
-playerDuanwei = requests.get('http://API.xunjob.cn/rank.php', params=payload).json()["duanwei"]
-playerLevel = int(playerInfo['level'])
-playerPower = int(playerInfo["zhandouli"])
-playerGood = playerInfo["good"]
-print "玩家等级:  %r \n" % playerLevel
-print "玩家段位: ", playerDuanwei, "\n"
-print "玩家战斗力:  %r \n" % playerPower
-print playerGood
-print "\n"
-
-oftenUsedHero = requests.get('http://API.xunjob.cn/hero.php', params=payload).json()["herostr"]
-print "\n"
-print "常用英雄列表："
-for hero in oftenUsedHero:
-    heroName = hero["attr"]["title"].split()[0]
-    print "\t", heroName
-print "\n"
+    <a href="/2016/02/25/LOLGel/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python -- 使用第三方API查看LOL玩家数据</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-heroData = requests.get('http://lolbox.duowan.com/new/api/index.php?_do=personal/championslist', params=payload).json()["content"]
-print "英雄详细信息："
-print "英雄名称\t英雄胜率\tMVP次数\t\t比赛场次\t平均击杀\t平均死亡\t平均助攻\t"
-for hero in heroData:
-    heroName = hero["championNameCN"]
-    if len(heroName) == 3:
-        heroName += " "
-    elif len(heroName) == 2:
-        heroName += " "*4
-    winRate = hero["winRate"]
-    matchStat = hero["matchStat"]
-    averageK = hero["averageKDA"][0]
-    averageD = hero["averageKDA"][1]
-    averageA = hero["averageKDA"][2]
-    totalMVP = hero["totalMVP"]
-    print heroName, "\t", str(winRate)+"%","\t\t", totalMVP, "\t\t" ,matchStat,"\t\t",averageK, "\t\t", averageD, "\t\t", averageA
 
-#这是用来统计调用次数的，不喜欢的话可以去掉
-log = requests.get('https://7pp.org/lol.html')
-</pre>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/02/25/LOLGel/" class="archive-article-date">
-  	<time datetime="2016-02-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-02-25</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/">code</a></li></ul>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="1000m-running" data-title="记第一次十公里跑" data-url="http://yoursite.com/2016/03/27/1000m-running/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"Hopsken"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-
-  
-  
 
 
       </div>
@@ -343,8 +280,8 @@ log = requests.get('https://7pp.org/lol.html')
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
