@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Python -- 使用第三方API查看LOL玩家数据 | Hopsken</title>
+  <title>Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题 | Hopsken</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="额，之所以会写这个脚本嘛，首先是因为晚自习实在无聊，其次因为舍友天天都在玩LOL，刚好今天下午看到有别人做的LOL的API。于是，就顺手写了这个脚本。实现原理很简单，没什么可说的，只用到了Python的Requests库。说起来，Requests真心很好用啊 😄">
+  <meta name="description" content="很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。
+有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python -- 使用第三方API查看LOL玩家数据">
-<meta property="og:url" content="http://hopsken.com/2016/02/25/LOLGel/index.html">
+<meta property="og:title" content="Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题">
+<meta property="og:url" content="http://hopsken.com/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/index.html">
 <meta property="og:site_name" content="Hopsken">
-<meta property="og:description" content="额，之所以会写这个脚本嘛，首先是因为晚自习实在无聊，其次因为舍友天天都在玩LOL，刚好今天下午看到有别人做的LOL的API。于是，就顺手写了这个脚本。实现原理很简单，没什么可说的，只用到了Python的Requests库。说起来，Requests真心很好用啊 😄">
-<meta property="og:updated_time" content="2016-10-04T10:23:08.000Z">
+<meta property="og:description" content="很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。
+有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这">
+<meta property="og:updated_time" content="2016-12-13T09:23:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python -- 使用第三方API查看LOL玩家数据">
-<meta name="twitter:description" content="额，之所以会写这个脚本嘛，首先是因为晚自习实在无聊，其次因为舍友天天都在玩LOL，刚好今天下午看到有别人做的LOL的API。于是，就顺手写了这个脚本。实现原理很简单，没什么可说的，只用到了Python的Requests库。说起来，Requests真心很好用啊 😄">
+<meta name="twitter:title" content="Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题">
+<meta name="twitter:description" content="很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。
+有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这">
   
     <link rel="alternative" href="/atom.xml" title="Hopsken" type="application/atom+xml">
   
@@ -152,7 +155,7 @@ ga('send', 'pageview');
 </nav>
 
       <div class="body-wrap">
-        <article id="post-LOLGel" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Xcode8-CocoaPods-Swift-3.0-problem-fix" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -162,7 +165,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Python -- 使用第三方API查看LOL玩家数据
+      Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题
     </h1>
   
 
@@ -170,85 +173,25 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>额，之所以会写这个脚本嘛，首先是因为晚自习实在无聊，其次因为舍友天天都在玩LOL，刚好今天下午看到有别人做的LOL的<a href="http://api.xunjob.cn/" target="_blank" rel="external">API</a>。于是，就顺手写了这个脚本。实现原理很简单，没什么可说的，只用到了Python的Requests库。说起来，Requests真心很好用啊 😄</p>
-<a id="more"></a>
-<p>代码如下:</p>
-<pre>
-#-*- coding: utf-8 -*-
-#LOLGel
-#Version: 0.0.1
-#Authored By Hopsken
-#Website: https://7pp.org
-
-import requests
-
-serverName = raw_input("> 请输入服务器大区名称...")
-playerName = raw_input("> 请输入召唤师昵称...")
-
-payload = {'serverName': '皮城警备', 'playerName': '龙龙瞎'}
-payload["serverName"] = serverName
-payload["playerName"] = playerName
-
-print "\n"
-print "服务器大区：", serverName, "召唤师：", playerName, "\n"
-
-record = requests.get('http://API.xunjob.cn/Record.php', params=payload).json()['Record']
-print "比赛记录: "
-print record
-print "\n"
-
-playerInfo = requests.get('http://API.xunjob.cn/playerinfo.php', params=payload).json()
-playerDuanwei = requests.get('http://API.xunjob.cn/rank.php', params=payload).json()["duanwei"]
-playerLevel = int(playerInfo['level'])
-playerPower = int(playerInfo["zhandouli"])
-playerGood = playerInfo["good"]
-print "玩家等级:  %r \n" % playerLevel
-print "玩家段位: ", playerDuanwei, "\n"
-print "玩家战斗力:  %r \n" % playerPower
-print playerGood
-print "\n"
-
-oftenUsedHero = requests.get('http://API.xunjob.cn/hero.php', params=payload).json()["herostr"]
-print "\n"
-print "常用英雄列表："
-for hero in oftenUsedHero:
-    heroName = hero["attr"]["title"].split()[0]
-    print "\t", heroName
-print "\n"
-
-
-heroData = requests.get('http://lolbox.duowan.com/new/api/index.php?_do=personal/championslist', params=payload).json()["content"]
-print "英雄详细信息："
-print "英雄名称\t英雄胜率\tMVP次数\t\t比赛场次\t平均击杀\t平均死亡\t平均助攻\t"
-for hero in heroData:
-    heroName = hero["championNameCN"]
-    if len(heroName) == 3:
-        heroName += " "
-    elif len(heroName) == 2:
-        heroName += " "*4
-    winRate = hero["winRate"]
-    matchStat = hero["matchStat"]
-    averageK = hero["averageKDA"][0]
-    averageD = hero["averageKDA"][1]
-    averageA = hero["averageKDA"][2]
-    totalMVP = hero["totalMVP"]
-    print heroName, "\t", str(winRate)+"%","\t\t", totalMVP, "\t\t" ,matchStat,"\t\t",averageK, "\t\t", averageD, "\t\t", averageA
-
-#这是用来统计调用次数的，不喜欢的话可以去掉
-log = requests.get('https://7pp.org/lol.html')
-</pre>
+        <p>很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。</p>
+<p>有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这样改过之后就能编译通过了，但是有时候仍然会报错。怎么彻底解决这个问题呢？<br><a id="more"></a></p>
+<p>遂StackOverFlow之。原来在 CocoaPods 1.1.1 版本中已经解决了这个问题。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>更新CocoaPods<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods --pre</div></pre></td></tr></table></figure></p>
+<p>在 Podfile 中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">post_install do |installer|</div><div class="line">  installer.pods_project.targets.each do |target|</div><div class="line">    target.build_configurations.each do |config|</div><div class="line">      config.build_settings[&apos;SWIFT_VERSION&apos;] = &apos;3.0&apos;</div><div class="line">    end</div><div class="line">  end</div><div class="line">end</div></pre></td></tr></table></figure></p>
+<p>运行 <code>pod install</code> 即可。</p>
+<p>再次打开项目，这时候就能够顺利编译通过啦～</p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/02/25/LOLGel/" class="archive-article-date">
-  	<time datetime="2016-02-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-02-25</time>
+      <a href="/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/" class="archive-article-date">
+  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-13</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/">code</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift-CocoaPods-Xcode/">Swift CocoaPods Xcode</a></li></ul>
 	</div>
 
       
@@ -261,15 +204,11 @@ log = requests.get('https://7pp.org/lol.html')
   
 <nav id="article-nav">
   
-    <a href="/2016/03/27/1000m-running/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          记第一次十公里跑
-        
-      </div>
-    </a>
   
+    <a href="/2016/11/21/my-chrome-extensions/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的 chrome 插件</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -301,7 +240,7 @@ log = requests.get('https://7pp.org/lol.html')
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="LOLGel" data-title="Python -- 使用第三方API查看LOL玩家数据" data-url="http://hopsken.com/2016/02/25/LOLGel/"></div>
+	<div class="ds-thread" data-thread-key="Xcode8-CocoaPods-Swift-3.0-problem-fix" data-title="Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题" data-url="http://hopsken.com/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
