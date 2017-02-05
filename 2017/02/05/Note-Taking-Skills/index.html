@@ -4,21 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题 | Hopsken</title>
+  <title>Note Taking Skills | Hopsken</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。
-有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这">
+  <meta name="description" content="Mindmap:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题">
-<meta property="og:url" content="http://hopsken.com/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/index.html">
+<meta property="og:title" content="Note Taking Skills">
+<meta property="og:url" content="http://hopsken.com/2017/02/05/Note-Taking-Skills/index.html">
 <meta property="og:site_name" content="Hopsken">
-<meta property="og:description" content="很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。
-有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这">
-<meta property="og:updated_time" content="2016-12-13T09:29:18.000Z">
+<meta property="og:description" content="Mindmap:">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fcfgpog614j310q0guwkp.jpg">
+<meta property="og:updated_time" content="2017-02-05T04:09:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题">
-<meta name="twitter:description" content="很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。
-有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这">
+<meta name="twitter:title" content="Note Taking Skills">
+<meta name="twitter:description" content="Mindmap:">
+<meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tNbRwgy1fcfgpog614j310q0guwkp.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hopsken" type="application/atom+xml">
   
@@ -155,7 +154,7 @@ ga('send', 'pageview');
 </nav>
 
       <div class="body-wrap">
-        <article id="post-Xcode8-CocoaPods-Swift-3.0-problem-fix" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Note-Taking-Skills" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -165,7 +164,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题
+      Note Taking Skills
     </h1>
   
 
@@ -173,25 +172,19 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>很多童鞋可能会遇到这样的问题：明明使用的 Swift 3 版本的库（比如 Alamofire 的 4.0.0 版本），但是使用 CocoaPods 安装之后打开 Xcode 仍然会提示 转换为 Swift 3，一路 Next 确认后各种报错。</p>
-<p>有童鞋提出一种解决方法，就是在项目设置里把 “Use Legacy Swift Language Version” 改为 No。经本人测试后，发现有些时候这样改过之后就能编译通过了，但是有时候仍然会报错。怎么彻底解决这个问题呢？<br><a id="more"></a></p>
-<p>遂StackOverFlow之。原来在 CocoaPods 1.1.1 版本中已经解决了这个问题。</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>更新CocoaPods<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods --pre</div></pre></td></tr></table></figure></p>
-<p>在 Podfile 中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">post_install do |installer|</div><div class="line">  installer.pods_project.targets.each do |target|</div><div class="line">    target.build_configurations.each do |config|</div><div class="line">      config.build_settings[&apos;SWIFT_VERSION&apos;] = &apos;3.0&apos;</div><div class="line">    end</div><div class="line">  end</div><div class="line">end</div></pre></td></tr></table></figure></p>
-<p>运行 <code>pod install</code> 即可。</p>
-<p>再次打开项目，这时候就能够顺利编译通过啦～</p>
+        <p>Mindmap:<br><img src="https://ww3.sinaimg.cn/large/006tNbRwgy1fcfgpog614j310q0guwkp.jpg" alt=""></p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/" class="archive-article-date">
-  	<time datetime="2016-12-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-13</time>
+      <a href="/2017/02/05/Note-Taking-Skills/" class="archive-article-date">
+  	<time datetime="2017-02-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-02-05</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CocoaPods/">CocoaPods</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Academic/">Academic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tutorial/">Tutorial</a></li></ul>
 	</div>
 
       
@@ -204,18 +197,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2017/02/05/Note-Taking-Skills/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Note Taking Skills
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/11/21/my-chrome-extensions/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的 Chrome 插件</div>
+    <a href="/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -249,7 +233,7 @@ ga('send', 'pageview');
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Xcode8-CocoaPods-Swift-3.0-problem-fix" data-title="Xcode8 中 CocoaPods 与 Swift 3.0 的适配问题" data-url="http://hopsken.com/2016/12/13/Xcode8-CocoaPods-Swift-3.0-problem-fix/"></div>
+	<div class="ds-thread" data-thread-key="Note-Taking-Skills" data-title="Note Taking Skills" data-url="http://hopsken.com/2017/02/05/Note-Taking-Skills/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
