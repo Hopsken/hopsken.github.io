@@ -169,50 +169,54 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li><p>标签选择器\<br> <code>h2 { }</code></p>
+<li><p>标签选择器</p>
+ <figure class="highlight plain"><figcaption><span>&#123; &#125;```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 类选择器</div><div class="line">    ```.className &#123; &#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>类选择器\<br> <code>.className { }</code></p>
-</li>
-<li><p>ID 选择器\<br> <code>#id { }</code></p>
-</li>
-<li><p>属性选择器</p>
-<ol>
-<li>简单属性匹配\<br><code>a[href] { }</code></li>
-<li>根据具体属性值\<br><code>a[href=&quot;google.com&quot;] { }</code></li>
-<li>根据部分属性值\<br><code>a[href~=&quot;google.com&quot;] { }</code>\<br>其他一些匹配模式:\<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[foo^="bar"]</span> <span class="comment">/*匹配开头*/</span> </div><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[foo$="bar"]</span> <span class="comment">/*匹配结尾*/</span></div><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[foo*="bar"]</span> <span class="comment">/*包含*/</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
+<li><p>ID 选择器</p>
+ <figure class="highlight plain"><figcaption><span>&#123; &#125;```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">4. 属性选择器</div><div class="line">    1. 简单属性匹配</div></pre></td></tr></table></figure>
+<p> a[href] { }</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2. 根据具体属性值</div></pre></td></tr></table></figure>
+<p> a[href=”google.com”] { }</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3. 根据部分属性值</div></pre></td></tr></table></figure>
+<p> a[href~=”google.com”] { }</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">其他一些匹配模式:</div><div class="line">```css</div><div class="line">p[foo^=&quot;bar&quot;] /*匹配开头*/ </div><div class="line">p[foo$=&quot;bar&quot;] /*匹配结尾*/</div><div class="line">p[foo*=&quot;bar&quot;] /*包含*/</div></pre></td></tr></table></figure>
 </li>
 <li><p>后代（上下文）选择器</p>
 <ol>
 <li>选择后代元素</li>
-<li>选择子元素 \<br> <code>h1 &gt; strong { }</code></li>
-<li>选择兄弟元素 \<br> <code>h1 + p { } \* 选择紧接在一个 h1 元素后出现的所以段落，h1 与 p 有相同的父元素 *\</code></li>
+<li><p>选择子元素 </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h1 &gt; strong &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>选择兄弟元素 </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h1 + p &#123; &#125; /* 选择紧接在一个 h1 元素后出现的所以段落，h1 与 p 有相同的父元素 */</div></pre></td></tr></table></figure>
+</li>
 </ol>
 </li>
 <li><p>伪类选择器和伪元素选择器</p>
 <ol>
-<li><p>伪类选择器<br> <code>a:visited {color: red;}</code></p>
+<li><p>伪类选择器 </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a:visited &#123;color: red;&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li><p>静态伪类 <code>:link  :visited :first-child</code> </p>
-<p>   <code>:first-child</code> 伪类：用于选择作为某个未知元素的第一个子元素的指定元素。\<br>  <code>:lang(fr)</code>伪类：根据元素的语言来选择。不同于 <code>|=</code>属性选择器，<code>lang</code> 的语言信息由属性与 META 信息提供，甚至可能包括 HTTP 头信息。</p>
+<li>静态伪类<br><code>:link  :visited :first-child</code><br>   <code>:first-child</code>伪类：用于选择作为某个未知元素的第一个子元素的指定元素。<br>  <code>:lang(fr)</code>伪类：根据元素的语言来选择。不同于 <code>|=</code>属性选择器，<code>lang</code>的语言信息由属性与 META 信息提供，甚至可能包括 HTTP 头信息。</li>
+<li><p>动态伪类<br><code>:focus :hover :active</code></p>
+<p>结合伪类<br>推荐顺序：<code>link-visited-focus-hover-active</code></p>
 </li>
-<li><p>动态伪类 <code>:focus :hover :active</code></p>
-<p>结合伪类\<br>推荐顺序：<code>link-visited-focus-hover-active</code></p>
-</li>
-</ul>
-</li>
-<li><p>伪元素选择器</p>
-<ul>
-<li>设置首字母样式\<br><code>p:first-letter {font-size: 200%}</code></li>
-<li>设置首行样式\<br><code>p:first-line { }</code>\<br><em>需要注意的是，应用<code>:first-letter :first-line</code> 的元素允许的属性是有限制的。</em></li>
-<li>设置之前和之后元素的样式\<br><code>h2:before {content:&quot; &quot;}</code>\<br><code>h2:after { }</code></li>
 </ul>
 </li>
 </ol>
 </li>
 </ol>
+<pre><code>2. 伪元素选择器
+    - 设置首字母样式
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-letter &#123;font-size: 200%&#125;</div></pre></td></tr></table></figure>
 
+    - 设置首行样式
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-line &#123; &#125;</div></pre></td></tr></table></figure>
+
+    *需要注意的是，应用`:first-letter :first-line`的元素允许的属性是有限制的。*
+    - 设置之前和之后元素的样式
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">h2:before &#123;content:&quot; &quot;&#125;</div><div class="line">h2:after &#123; &#125;</div></pre></td></tr></table></figure>
+</code></pre>
       
     </div>
     <div class="article-info article-info-index">
