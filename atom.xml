@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hopsken.com/"/>
-  <updated>2017-06-04T13:14:05.000Z</updated>
+  <updated>2017-06-04T13:34:09.000Z</updated>
   <id>http://hopsken.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hopsken.com/2017/06/04/CSS-selector/"/>
     <id>http://hopsken.com/2017/06/04/CSS-selector/</id>
     <published>2017-06-03T16:00:00.000Z</published>
-    <updated>2017-06-04T13:14:05.000Z</updated>
+    <updated>2017-06-04T13:34:09.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li><p>标签选择器</p>
@@ -70,20 +70,23 @@
 </li>
 </ul>
 </li>
+<li><p>伪元素选择器</p>
+<ul>
+<li><p>设置首字母样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-letter &#123;font-size: 200%&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置首行样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-line &#123; &#125;</div></pre></td></tr></table></figure>
+<p><em>需要注意的是，应用<code>:first-letter :first-line</code>的元素允许的属性是有限制的。</em></p>
+</li>
+<li>设置之前和之后元素的样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">h2:before &#123;content:&quot; &quot;&#125;</div><div class="line">h2:after &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
 </ol>
 </li>
 </ol>
-<pre><code>2. 伪元素选择器
-    - 设置首字母样式
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-letter &#123;font-size: 200%&#125;</div></pre></td></tr></table></figure>
-
-    - 设置首行样式
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-line &#123; &#125;</div></pre></td></tr></table></figure>
-
-    *需要注意的是，应用`:first-letter :first-line`的元素允许的属性是有限制的。*
-    - 设置之前和之后元素的样式
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">h2:before &#123;content:&quot; &quot;&#125;</div><div class="line">h2:after &#123; &#125;</div></pre></td></tr></table></figure>
-</code></pre>]]></content>
+]]></content>
     
     <summary type="html">
     
