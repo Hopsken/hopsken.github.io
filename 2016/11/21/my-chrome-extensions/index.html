@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>我的 Chrome 插件 | Hopsken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1Password 很久以前 iOS 限免的时候收的，配合起来用超级方便。最好用的密码管理软件（没有之一）。妈妈再也不用担心我不记得密码啦～  Adblock Plus 大名鼎鼎的ABP！广告？那是什么？  Instapaper Instapaper 的 chrome 插件，快速保存页面内容到 Instapaper。话说最近 Instapaper 高级版永久免费了好像。">
+<meta name="keywords" content="Chrome">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的 Chrome 插件">
+<meta property="og:url" content="http://hopsken.com/2016/11/21/my-chrome-extensions/index.html">
+<meta property="og:site_name" content="Hopsken">
+<meta property="og:description" content="1Password 很久以前 iOS 限免的时候收的，配合起来用超级方便。最好用的密码管理软件（没有之一）。妈妈再也不用担心我不记得密码啦～  Adblock Plus 大名鼎鼎的ABP！广告？那是什么？  Instapaper Instapaper 的 chrome 插件，快速保存页面内容到 Instapaper。话说最近 Instapaper 高级版永久免费了好像。">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gw1fa03fyxrccj30hs0b4wfi.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gw1fa03l92tu2j30hs0b4wg3.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gw1fa03muhx87j31e00wrtgp.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fds2aqps4sj30zk0m8ta6.jpg">
+<meta property="og:updated_time" content="2017-03-19T05:00:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的 Chrome 插件">
+<meta name="twitter:description" content="1Password 很久以前 iOS 限免的时候收的，配合起来用超级方便。最好用的密码管理软件（没有之一）。妈妈再也不用担心我不记得密码啦～  Adblock Plus 大名鼎鼎的ABP！广告？那是什么？  Instapaper Instapaper 的 chrome 插件，快速保存页面内容到 Instapaper。话说最近 Instapaper 高级版永久免费了好像。">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/006tNc79gw1fa03fyxrccj30hs0b4wfi.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Hopsken" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//assets/hopsken.jpg">
+  
+  <script src="/style.js"></script>
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-82430876-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/assets/hopsken.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Hopsken</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/hopsken" title="github">github</a>
+		        
+					<a class="rss" target="_blank" href="http://hopsken.com/atom.xml" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hopsken" title="zhihu">zhihu</a>
+		        
+					<a class="twitter" target="_blank" href="https://twitter.com/hopsken_" title="twitter">twitter</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Hopsken</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/assets/hopsken.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Hopsken</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/hopsken" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="http://hopsken.com/atom.xml" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hopsken" title="zhihu">zhihu</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/hopsken_" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-my-chrome-extensions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我的 Chrome 插件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>1Password<br> 很久以前 iOS 限免的时候收的，配合起来用超级方便。最好用的密码管理软件（没有之一）。妈妈再也不用担心我不记得密码啦～</p>
+</li>
+<li><p>Adblock Plus<br> 大名鼎鼎的ABP！广告？那是什么？</p>
+</li>
+<li><p>Instapaper<br> Instapaper 的 chrome 插件，快速保存页面内容到 Instapaper。话说最近 Instapaper 高级版永久免费了好像。<a id="more"></a></p>
+</li>
+<li><p>Isometric Contributions<br> 让你的 Github 贡献看起来更美观～<br> <img src="http://ww3.sinaimg.cn/large/006tNc79gw1fa03fyxrccj30hs0b4wfi.jpg" alt="" title="Isometric Contributions"></p>
+</li>
+<li><p>JSON Formatter<br> 更美观的 JSON 输出，调试 API 的时候很方便。<br> <img src="http://ww2.sinaimg.cn/large/006tNc79gw1fa03l92tu2j30hs0b4wg3.jpg" alt="" title="JSON Formatter"></p>
+</li>
+<li><p>Octotree<br> 像浏览本地文件夹一样浏览 Github Repo<br> <img src="http://ww3.sinaimg.cn/large/006tNc79gw1fa03muhx87j31e00wrtgp.jpg" alt="" title="Octotree"></p>
+</li>
+<li><p>RatherNice<br> 一个可以让你心情好起来的新标签页插件～<br> <img src="https://ww2.sinaimg.cn/large/006tKfTcly1fds2aqps4sj30zk0m8ta6.jpg" alt="" title="RatherNice"></p>
+</li>
+<li><p>Stylebot<br> 可以任意修改网站的 CSS 来让网站看起来更舒服，也可以用来屏蔽广告。你还可以使用别人分享的 CSS 风格，当然你也可以自己设计并分享给其他人。</p>
+</li>
+<li><p>v2ex plus<br> v2ex的插件。对于一个经常逛V站的人来说几乎必备。</p>
+</li>
+<li><p>Vimium<br>如果你是 Vim 党，你一定会喜欢这个插件的！你可以像在 Vim 里一样，使用快捷键来控制网页滚动、跳转、搜索等等，极大提高工作效率。</p>
+</li>
+<li><p>Wappalyzer<br>用来分析网站的架构。前端工程师必备。</p>
+</li>
+<li><p>印象笔记·剪藏<br>把当前网页内容收藏到印象笔记里面，填充自己的资料库。</p>
+</li>
+<li><p>印象笔记·悦读<br>印象笔记的另一款插件。提供更舒服的阅读体验。</p>
+</li>
+<li><p>高效网页截图编辑插件<br>一款强大的网页截图工具。开发者也很有趣。</p>
+</li>
+<li><p>AdF.ly Skipper<br>跳过AdF.ly的一个工具。之前玩 Minecraft 下载mod的时候经常会用到。</p>
+</li>
+</ol>
+<p>最后，安利一款 chrome 主题：<a href="https://chrome.google.com/webstore/detail/slinky-brushed/piiokbhpgldooopjdacdondngonfljoc?hl=zh-CN" target="_blank" rel="external"> Slinky </a>，换来换去最喜欢的还是这个！</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/21/my-chrome-extensions/" class="archive-article-date">
+  	<time datetime="2016-11-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-21</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/04/CSS-selector/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS 选择器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/27/1000m-running/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">记第一次十公里跑</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="my-chrome-extensions" data-title="我的 Chrome 插件" data-url="http://hopsken.com/2016/11/21/my-chrome-extensions/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hopsken"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2018 Hopsken
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/跑步/" style="font-size: 10px;">跑步</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://everdream.xyz/">EverDream</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">Made With ❤️</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
