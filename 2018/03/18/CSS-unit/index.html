@@ -1,176 +1,57 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>CSS 单位与百分比值详述 | Hopsken</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="单位是我们控制尺寸的重要工具，也是我们在编写 CSS 代码时会经常使用到的。CSS 的单位主要分成两种：绝对单位和相对单位。">
-<meta name="keywords" content="CSS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS 单位与百分比值详述">
-<meta property="og:url" content="http://hopsken.com/2018/03/18/CSS-unit/index.html">
-<meta property="og:site_name" content="Hopsken">
-<meta property="og:description" content="单位是我们控制尺寸的重要工具，也是我们在编写 CSS 代码时会经常使用到的。CSS 的单位主要分成两种：绝对单位和相对单位。">
-<meta property="og:updated_time" content="2018-03-21T14:32:08.124Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS 单位与百分比值详述">
-<meta name="twitter:description" content="单位是我们控制尺寸的重要工具，也是我们在编写 CSS 代码时会经常使用到的。CSS 的单位主要分成两种：绝对单位和相对单位。">
-  
-    <link rel="alternative" href="/atom.xml" title="Hopsken" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="//assets/hopsken.jpg">
-  
-  <script src="/style.js"></script>
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Head tag -->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-ga('create', 'UA-82430876-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon/favicon.png">
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="/css/custom.css">
+    <!-- Highlight style -->
+    <link rel="stylesheet" href="/css/highlight-github-gist.css">
 </head>
-
-<body>
-  <div id="container">
-    <div class="left-col">
-      <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img src="/assets/hopsken.jpg" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-		  <h1 class="header-author"><a href="/">Hopsken</a></h1>
-		</hgroup>
-
-		
-
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/随笔">随笔</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-	        
-    		
-    			
-    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
-    			
-    			
+    <body>
+      <!-- header -->
+      <div class="masthead">
+    <a href="/">
+        <img class="logo" src="/images/logo.jpg">
+    </a>
+    <nav class="nav">
+        
             
-    			
-    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
-    			
-    			
+            <a class="nav-item " href="/">Home</a>
+        
             
-    			
-    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
-    			
-    			
+            <a class="nav-item " href="/archives">Archives</a>
+        
             
-    			
-    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
-    			
-    			
+            <a class="nav-item " href="https://github.com/hopsken">Github</a>
+        
             
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="https://github.com/hopsken" title="github">github</a>
-		        
-					<a class="rss" target="_blank" href="http://hopsken.com/atom.xml" title="rss">rss</a>
-		        
-					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hopsken" title="zhihu">zhihu</a>
-		        
-					<a class="twitter" target="_blank" href="https://twitter.com/hopsken_" title="twitter">twitter</a>
-		        
-			</div>
-		</nav>
-	</header>		
+            <a class="nav-item " href="/atom.xml">RSS</a>
+        
+    </nav>
 </div>
 
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"><i class="icon-list"></i></div>
-  		<h1 class="header-author js-mobile-header hide">Hopsken</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				
-					<img src="/assets/hopsken.jpg" class="js-avatar">
-				
-			</div>
-			<hgroup>
-			  <h1 class="header-author">Hopsken</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/tags/随笔">随笔</a></li>
-		        
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/hopsken" title="github">github</a>
-			        
-						<a class="rss" target="_blank" href="http://hopsken.com/atom.xml" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/hopsken" title="zhihu">zhihu</a>
-			        
-						<a class="twitter" target="_blank" href="https://twitter.com/hopsken_" title="twitter">twitter</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-
-      <div class="body-wrap">
-        <article id="post-CSS-unit" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      CSS 单位与百分比值详述
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+      <!-- Main content -->
+      <div class="main" role="main">
+        <div class="article">
+    <!-- Title -->
+    <h2 class="post-title">
+        CSS 单位与百分比值详述
+    </h2>
+    <!-- Date and Author -->
+    <p class="post-info">
+        2018-03-18
+    </p>
+    <!-- Content -->
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#绝对单位"><span class="toc-text">绝对单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相对单位"><span class="toc-text">相对单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#百分比"><span class="toc-text">百分比</span></a></li></ol>
+    <div class="post-content">
         <p>单位是我们控制尺寸的重要工具，也是我们在编写 CSS 代码时会经常使用到的。CSS 的单位主要分成两种：绝对单位和相对单位。<a id="more"></a></p>
 <h3 id="绝对单位"><a href="#绝对单位" class="headerlink" title="绝对单位"></a>绝对单位</h3><p>CSS 中的绝对单位包括：mm（毫米），cm（厘米），in（英寸），pt（点），pc（派卡）。</p>
 <ul>
@@ -183,7 +64,14 @@ ga('send', 'pageview');
 <li>px（像素），像素就是显示器上的一个点。关于 px 是相对长度单位还是绝对长度单位这一点有争议，<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="external">MDN</a>把 px 归为绝对单位，而《CSS权威指南（第三版）》中则把它归为相对单位（因为取决于显示设备的分辨率）。</li>
 <li>em，ex，ch。1em 被定义为一种给定字体的 font-size 值。比方说一个元素的 font-size 为 20px，那么对于这个元素，1em=20px。另外如果没有为当前元素指定 font-size，但是因为font-size值是会继承的，所以会取父元素的值。举个栗子：</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum <span class="tag">&lt;<span class="name">span</span>&gt;</span>foo bar<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">div &#123;font-size: 20px;&#125;</div><div class="line">p &#123;font-size: 1.2em;&#125; //计算值为 20px*1.2 = 24px</div><div class="line">span &#123;font-size: 0.8em;&#125; //计算值为 20px*1.2*0.8=19.2px</div></pre></td></tr></table></figure>
+<pre><code class="html">&lt;div&gt;
+    &lt;p&gt;Lorem ipsum &lt;span&gt;foo bar&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+div {font-size: 20px;}
+p {font-size: 1.2em;} //计算值为 20px*1.2 = 24px
+span {font-size: 0.8em;} //计算值为 20px*1.2*0.8=19.2px
+</code></pre>
 <ul>
 <li>ex，ch。理论上，ex 是指所用字体中小写 x 的高度，ch 是指所用字体 0 的宽度，但是浏览器对两个单位的支持有限，很多浏览器的实际做法是取1ex=0.5em。</li>
 <li>rem，即 root em，是 CSS 3中新定义的单位。与 em 类似，不过 rem 永远是以默认基础字体大小为参照的，继承的字体大小不会影响它。我们可以基于rem这一特性构建出响应式布局。一般浏览器默认的字体大小都是16px。</li>
@@ -235,242 +123,55 @@ ga('send', 'pageview');
 </tbody>
 </table>
 
-      
     </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2018/03/18/CSS-unit/" class="archive-article-date">
-  	<time datetime="2018-03-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2018-03-18</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/前端/">前端</a>
-	</div>
-
-
-      <div class="clearfix"></div>
+        
+    
+    <div class="post-tags">
+        <a href="/tags/CSS/">#CSS</a>
     </div>
-  </div>
-</article>
-
-  
-<nav id="article-nav">
-  
-  
-    <a href="/2017/08/20/javascript-data-stuctures/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数据结构学习笔记（JavaScript 描述）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
+    
+        <div class="clear"></div>
+        <nav>
+        <ul class="pager">
+            
+            
+                <li><a href="/2017/08/20/javascript-data-stuctures/">下一篇</a></li>
+            
+        </ul>
 </nav>
+        
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'hopsken';
+        var disqus_config = function () {
+            this.page.url = 'http://hopsken.com/2018/03/18/CSS-unit/';
+            this.page.identifier = '/2018/03/18/CSS-unit/';
+            this.page.title = 'CSS 单位与百分比值详述';
+        };
+        (function(){
+          var d = document;
+          var dsq = d.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (d.head || d.body).appendChild(dsq);
+        })();
+    </script>
 
-
-
-
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-	    <a class="jiathis_button_twitter"></a>
-	    <a class="jiathis_button_plus"></a> 
-	    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
 </div>
-
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="CSS-unit" data-title="CSS 单位与百分比值详述" data-url="http://hopsken.com/2018/03/18/CSS-unit/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"hopsken"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
-
-
+    
       </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2018 Hopsken
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
+
+      <!-- footer -->
+      <footer>
+    
+    © 2018 Hopsken, powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/hopsken/hexo-theme-wen">hexo-theme-wen</a>.
 </footer>
-    </div>
-    <script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: false,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: "/",
-		innerArchive: true
-	}
-</script>
+      
+      <!-- after footer scripts -->
+      <!-- Highlight JS -->
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    </body>
 
-<script src="/./main.js"></script>
-
-
-    
-<div class="tools-col">
-  <ul class="btn-wrap">
-    
-      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
-    
-    
-      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
-    
-    
-      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
-    
-    
-      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
-    
-  </ul>
-  <div class="tools-wrap">
-    
-    	<section class="tools-section tools-section-all chose">
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-tag">
-    			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/跑步/" style="font-size: 10px;">跑步</a>
-    			</div>
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-friends">
-  		
-  			<div class="friends-wrap" id="js-friends">
-  			
-  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://everdream.xyz/">EverDream</a>
-  	        
-  	        </div>
-  		
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-me">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">Made With ❤️</div>
-  	  	
-    	</section>
-    
-  </div>
-  
-</div>
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-  </div>
-</body>
 </html>
