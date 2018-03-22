@@ -35,7 +35,7 @@ Object.getPrototypeOf(kitty) === Cat.prototype  //=&gt;true
 <h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><p>对象还有另外一个属性 <code>constructor</code> 。与 <code>prototype</code> 相反，<code>constructor</code> 是原型的属性，指向该原型的构造函数。</p>
 <pre><code class="javascript">Cat.prototype.constructor === Cat   //=&gt;true
 </code></pre>
-<p>详细关系图如下，摘自<a href="https://github.com/mqyqingfeng/Blog/issues/2" target="_blank" rel="external">Github: mqyqingfeng/Blog</a><br><img src="https://o8r4eescd.qnssl.com/15217112091355.png" alt=""></p>
+<p>详细关系图如下，摘自<a href="https://github.com/mqyqingfeng/Blog/issues/2" target="_blank" rel="noopener">Github: mqyqingfeng/Blog</a><br><img src="https://o8r4eescd.qnssl.com/15217112091355.png" alt=""></p>
 <h2 id="使用Object-create-方法"><a href="#使用Object-create-方法" class="headerlink" title="使用Object.create()方法"></a>使用Object.create()方法</h2><p>ES5 中引入了一个新方法：Object.create()。可以调用这个方法来创建一个新对象。新对象的原型就是调用 create 方法时传入的第一个参数：</p>
 <pre><code class="javascript">var a = {a: 1}; 
 // a ---&gt; Object.prototype ---&gt; null
@@ -44,14 +44,14 @@ var b = Object.create(a);
 // b ---&gt; a ---&gt; Object.prototype ---&gt; null
 console.log(b.a); // 1 (继承而来)
 </code></pre>
-<h2 id="使用-class-关键字"><a href="#使用-class-关键字" class="headerlink" title="使用 class 关键字"></a>使用 class 关键字</h2><p>ES6 中引入了一套新的关键字用来实现 <code>class</code>，但它仍然是基于原型的。详见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes" target="_blank" rel="external">类 - MDN</a>。</p>
+<h2 id="使用-class-关键字"><a href="#使用-class-关键字" class="headerlink" title="使用 class 关键字"></a>使用 class 关键字</h2><p>ES6 中引入了一套新的关键字用来实现 <code>class</code>，但它仍然是基于原型的。详见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes" target="_blank" rel="noopener">类 - MDN</a>。</p>
 <p><em>参考资料：</em></p>
 <ol>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">继承与原型链 - MDN</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="external">Object.create() - MDN</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html" target="_blank" rel="external">Javascript继承机制的设计思想 - 阮一峰的网络日志</a></li>
-<li><a href="https://github.com/mqyqingfeng/Blog/issues/2" target="_blank" rel="external">mqyqingfeng/Blog - Github</a></li>
-<li><a href="https://blog.oyanglul.us/javascript/understand-prototype.html" target="_blank" rel="external">理解JavaScript的原型链和继承 - blog.oyanglul.us</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="noopener">继承与原型链 - MDN</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="noopener">Object.create() - MDN</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html" target="_blank" rel="noopener">Javascript继承机制的设计思想 - 阮一峰的网络日志</a></li>
+<li><a href="https://github.com/mqyqingfeng/Blog/issues/2" target="_blank" rel="noopener">mqyqingfeng/Blog - Github</a></li>
+<li><a href="https://blog.oyanglul.us/javascript/understand-prototype.html" target="_blank" rel="noopener">理解JavaScript的原型链和继承 - blog.oyanglul.us</a></li>
 </ol>
 </div></article></div></main><footer><div class="paginator"><a href="/2018/03/18/CSS-units/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'hopsken';
 var disqus_identifier = '2018/03/20/understand-prototype/';

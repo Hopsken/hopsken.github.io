@@ -7,7 +7,7 @@
 <p>事实上，我们很少需要用到绝对单位。因为一般来说我们网页需要在各种不同大小的屏幕上显示，使用绝对长度很难确保内容显示的一致性。</p>
 <h3 id="相对单位"><a href="#相对单位" class="headerlink" title="相对单位"></a>相对单位</h3><p>CSS 中的相对长度单位包括：px（像素），em，ex，ch，rem，vw，vh，vmin，vmax</p>
 <ul>
-<li>px（像素），像素就是显示器上的一个点。关于 px 是相对长度单位还是绝对长度单位这一点有争议，<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="external">MDN</a>把 px 归为绝对单位，而《CSS权威指南（第三版）》中则把它归为相对单位（因为取决于显示设备的分辨率）。</li>
+<li>px（像素），像素就是显示器上的一个点。关于 px 是相对长度单位还是绝对长度单位这一点有争议，<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="noopener">MDN</a>把 px 归为绝对单位，而《CSS权威指南（第三版）》中则把它归为相对单位（因为取决于显示设备的分辨率）。</li>
 <li>em，ex，ch。1em 被定义为一种给定字体的 font-size 值。比方说一个元素的 font-size 为 20px，那么对于这个元素，1em=20px。另外如果没有为当前元素指定 font-size，但是因为font-size值是会继承的，所以会取父元素的值。举个栗子：</li>
 </ul>
 <pre><code class="html">&lt;div&gt;
@@ -25,7 +25,7 @@ span {font-size: 0.8em;} //计算值为 20px*1.2*0.8=19.2px
 <li>vmin，vmax，这两个也是 CSS 3 新定义的视口单位。其中，vmin 取 vw 与 vh 中较小的那个单位，vmax 则相反取较大的那个。</li>
 </ul>
 <h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><p>百分比值是 CSS 中非常常用的一种数值，也是很多新手很容易困惑的地方。形式上百分比值就是实数+百分号（%）。因为百分比值几乎总是相对于另一个值的，而对于不同的属性，选择的参考值也是不同的，所以得到的计算值也会不同。</p>
-<p>要想真正掌握百分比值的计算，首先要了解<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/All_About_The_Containing_Block" target="_blank" rel="external">包含块（MDN）</a>的概念。大多数情况下，包含块就是父级块元素的 content 区域，即内容区。</p>
+<p>要想真正掌握百分比值的计算，首先要了解<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/All_About_The_Containing_Block" target="_blank" rel="noopener">包含块（MDN）</a>的概念。大多数情况下，包含块就是父级块元素的 content 区域，即内容区。</p>
 <table>
 <thead>
 <tr>
@@ -70,10 +70,10 @@ span {font-size: 0.8em;} //计算值为 20px*1.2*0.8=19.2px
 </table>
 <p><em>参考资料</em></p>
 <ol>
-<li><a href="https://www.amazon.cn/dp/B0011F5SIC/" target="_blank" rel="external">《CSS 权威指南（第三版）》</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="external">CSS 的值和单位 - MDN</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/All_About_The_Containing_Block" target="_blank" rel="external">All about the containing block - MDN</a></li>
-<li><a href="https://web.archive.org/web/20150906065047/https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_percentage_values" target="_blank" rel="external">CSS percentage values - MDN</a> </li>
+<li><a href="https://www.amazon.cn/dp/B0011F5SIC/" target="_blank" rel="noopener">《CSS 权威指南（第三版）》</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="noopener">CSS 的值和单位 - MDN</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/All_About_The_Containing_Block" target="_blank" rel="noopener">All about the containing block - MDN</a></li>
+<li><a href="https://web.archive.org/web/20150906065047/https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_percentage_values" target="_blank" rel="noopener">CSS percentage values - MDN</a> </li>
 </ol>
 </div></article></div></main><footer><div class="paginator"><a href="/2018/03/20/understand-prototype/" class="prev">PREV</a><a href="/2017/08/20/javascript-data-stuctures/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'hopsken';
 var disqus_identifier = '2018/03/18/CSS-units/';
