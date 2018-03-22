@@ -1,25 +1,26 @@
 <!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> CSS 选择器 · Hopsken</title><meta name="description" content="CSS 选择器 - Hopsken"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/assets/hopsken.jpg"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://hopsken.com/atom.xml" title="Hopsken"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/assets/hopsken.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://www.zhihu.com/people/hopsken/" target="_blank" class="nav-list-link">ZHIHU</a></li><li class="nav-list-item"><a href="https://github.com/hopsken" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">CSS 选择器</h1><div class="post-info">Jun 4, 2017</div><div class="post-content"><p>推荐一个练习 CSS 选择器的小游戏 <a href="https://flukeout.github.io/" target="_blank" rel="noopener">CSS Diner</a>。<br><a id="more"></a></p>
 <ol>
 <li><p>标签选择器</p>
-<pre><code>h2 { }
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h2 &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
 <li><p>类选择器</p>
-<pre><code>.className { }
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.className &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
 <li><p>ID 选择器</p>
-<pre><code>#id { }
-</code></pre></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#id &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
 <li><p>属性选择器</p>
 <ol>
-<li>简单属性匹配<pre><code>a[href] { }
-</code></pre></li>
-<li>根据具体属性值<pre><code>a[href=&quot;google.com&quot;] { }
-</code></pre></li>
-<li>根据部分属性值<pre><code>a[href~=&quot;google.com&quot;] { }
-</code></pre>其他一些匹配模式:<pre><code class="css">p[foo^=&quot;bar&quot;] /*匹配开头*/ 
-p[foo$=&quot;bar&quot;] /*匹配结尾*/
-p[foo*=&quot;bar&quot;] /*包含*/
-</code></pre>
+<li><p>简单属性匹配</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a[href] &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>根据具体属性值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a[href=&quot;google.com&quot;] &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>根据部分属性值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a[href~=&quot;google.com&quot;] &#123; &#125;</div></pre></td></tr></table></figure>
+<p>其他一些匹配模式:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[foo^="bar"]</span> <span class="comment">/*匹配开头*/</span> </div><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[foo$="bar"]</span> <span class="comment">/*匹配结尾*/</span></div><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[foo*="bar"]</span> <span class="comment">/*包含*/</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
@@ -27,20 +28,18 @@ p[foo*=&quot;bar&quot;] /*包含*/
 <ol>
 <li>选择后代元素</li>
 <li><p>选择子元素 </p>
-<pre><code> h1 &gt; strong { }
-</code></pre></li>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h1 &gt; strong &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
 <li><p>选择兄弟元素 </p>
-<pre><code> h1 + p { } /* 选择紧接在一个 h1 元素后出现的所以段落，h1 与 p 有相同的父元素 */
-</code></pre></li>
-</ol>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">h1 + p &#123; &#125; /* 选择紧接在一个 h1 元素后出现的所以段落，h1 与 p 有相同的父元素 */</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol>
+</li>
 <li><p>伪类选择器和伪元素选择器</p>
 <ol>
 <li><p>伪类选择器 </p>
-<pre><code> a:visited {color: red;}
-</code></pre><ul>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a:visited &#123;color: red;&#125;</div></pre></td></tr></table></figure>
+<ul>
 <li>静态伪类<br><code>:link  :visited :first-child</code><br>   <code>:first-child</code>伪类：用于选择作为某个未知元素的第一个子元素的指定元素。<br>  <code>:lang(fr)</code>伪类：根据元素的语言来选择。不同于 <code>|=</code>属性选择器，<code>lang</code>的语言信息由属性与 META 信息提供，甚至可能包括 HTTP 头信息。</li>
 <li><p>动态伪类<br><code>:focus :hover :active</code></p>
 <p>结合伪类<br>推荐顺序：<code>link-visited-focus-hover-active</code></p>
@@ -50,15 +49,14 @@ p[foo*=&quot;bar&quot;] /*包含*/
 <li><p>伪元素选择器</p>
 <ul>
 <li><p>设置首字母样式</p>
-<pre><code>p:first-letter {font-size: 200%}
-</code></pre></li>
-<li><p>设置首行样式</p>
-<pre><code>p:first-line { }
-</code></pre><p><em>需要注意的是，应用<code>:first-letter :first-line</code>的元素允许的属性是有限制的。</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-letter &#123;font-size: 200%&#125;</div></pre></td></tr></table></figure>
 </li>
-<li>设置之前和之后元素的样式<pre><code>h2:before {content:&quot; &quot;}
-h2:after { }
-</code></pre></li>
+<li><p>设置首行样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p:first-line &#123; &#125;</div></pre></td></tr></table></figure>
+<p><em>需要注意的是，应用<code>:first-letter :first-line</code>的元素允许的属性是有限制的。</em></p>
+</li>
+<li>设置之前和之后元素的样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">h2:before &#123;content:&quot; &quot;&#125;</div><div class="line">h2:after &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ol>
