@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hopsken.com/"/>
-  <updated>2018-03-21T14:32:08.124Z</updated>
+  <updated>2018-03-22T02:42:11.199Z</updated>
   <id>http://hopsken.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hopsken.com/2018/03/18/CSS-unit/"/>
     <id>http://hopsken.com/2018/03/18/CSS-unit/</id>
     <published>2018-03-17T16:00:00.000Z</published>
-    <updated>2018-03-21T14:32:08.124Z</updated>
+    <updated>2018-03-22T02:42:11.199Z</updated>
     
     <content type="html"><![CDATA[<p>单位是我们控制尺寸的重要工具，也是我们在编写 CSS 代码时会经常使用到的。CSS 的单位主要分成两种：绝对单位和相对单位。<a id="more"></a></p>
 <h3 id="绝对单位"><a href="#绝对单位" class="headerlink" title="绝对单位"></a>绝对单位</h3><p>CSS 中的绝对单位包括：mm（毫米），cm（厘米），in（英寸），pt（点），pc（派卡）。</p>
@@ -60,7 +60,7 @@ span {font-size: 0.8em;} //计算值为 20px*1.2*0.8=19.2px
 <tbody>
 <tr>
 <td style="text-align:left">包含块宽度</td>
-<td style="text-align:left">[max/min-]width、left、right、text-indent、padding-<em>、margin-</em> 等</td>
+<td style="text-align:left">[max/min-]width、left、right、text-indent、padding-*、margin-* 等</td>
 </tr>
 <tr>
 <td style="text-align:left">包含块高度</td>
@@ -80,7 +80,7 @@ span {font-size: 0.8em;} //计算值为 20px*1.2*0.8=19.2px
 </tr>
 <tr>
 <td style="text-align:left">自身宽高</td>
-<td style="text-align:left">border-<em>-</em>-radius 等</td>
+<td style="text-align:left">border-*-*-radius 等</td>
 </tr>
 <tr>
 <td style="text-align:left">边界框尺寸</td>
