@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hopsken.com/"/>
-  <updated>2018-03-22T10:03:29.039Z</updated>
+  <updated>2018-03-22T10:08:50.107Z</updated>
   <id>http://hopsken.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://hopsken.com/2018/03/20/understand-prototype/"/>
     <id>http://hopsken.com/2018/03/20/understand-prototype/</id>
     <published>2018-03-19T16:00:00.000Z</published>
-    <updated>2018-03-22T10:03:29.039Z</updated>
+    <updated>2018-03-22T10:08:50.107Z</updated>
     
     <content type="html"><![CDATA[<p>相信很多小伙伴在刚开始接触 JavaScript 的继承机制时都会感到一头雾水，特别是对于有面向对象编程语言（如Java，Python等）经验的同学。因为 JavaScript 本身不提供 class 实现，而是使用一种称作『原型链』的方法来模拟了类的继承。<br><a id="more"></a></p>
 <p>要想理解原型链，首先需要知道的一点就是 JavaScript 是基于对象的。每一个对象都有一个私有属性<code>[[prototype]]</code>，它指向它的原型对象（prototype）。该原型对象又有一个自己的 prototype，层层向上直到一个对象的原型为<code>null</code>。这就是原型链，原型链的作用就是把这些对象联系起来。</p>
@@ -69,7 +69,7 @@ var b = Object.create(a);
 console.log(b.a); // 1 (继承而来)
 </code></pre>
 <h2 id="使用-class-关键字"><a href="#使用-class-关键字" class="headerlink" title="使用 class 关键字"></a>使用 class 关键字</h2><p>ES6 中引入了一套新的关键字用来实现 <code>class</code>，但它仍然是基于原型的。详见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes" target="_blank" rel="external">类 - MDN</a>。</p>
-<p><strong>参考资料：</strong></p>
+<p><em>参考资料：</em></p>
 <ol>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">继承与原型链 - MDN</a></li>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="external">Object.create() - MDN</a></li>
@@ -97,7 +97,7 @@ console.log(b.a); // 1 (继承而来)
     <link href="http://hopsken.com/2018/03/18/CSS-units/"/>
     <id>http://hopsken.com/2018/03/18/CSS-units/</id>
     <published>2018-03-17T16:00:00.000Z</published>
-    <updated>2018-03-22T10:03:40.613Z</updated>
+    <updated>2018-03-22T10:08:35.376Z</updated>
     
     <content type="html"><![CDATA[<p>单位是我们控制尺寸的重要工具，也是我们在编写 CSS 代码时会经常使用到的。CSS 的单位主要分成两种：绝对单位和相对单位。<a id="more"></a></p>
 <h3 id="绝对单位"><a href="#绝对单位" class="headerlink" title="绝对单位"></a>绝对单位</h3><p>CSS 中的绝对单位包括：mm（毫米），cm（厘米），in（英寸），pt（点），pc（派卡）。</p>
@@ -169,7 +169,7 @@ span {font-size: 0.8em;} //计算值为 20px*1.2*0.8=19.2px
 </tr>
 </tbody>
 </table>
-<p><strong>参考资料</strong></p>
+<p><em>参考资料</em></p>
 <ol>
 <li><a href="https://www.amazon.cn/dp/B0011F5SIC/" target="_blank" rel="external">《CSS 权威指南（第三版）》</a></li>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank" rel="external">CSS 的值和单位 - MDN</a></li>
