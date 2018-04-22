@@ -379,8 +379,8 @@ img {
     border-radius: .5rem;
 }
 
-.article>figure,
-.article>pre {
+/* 代码高亮 */
+.highlight {
     padding: 40px;
     border-radius: .5rem;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
@@ -389,11 +389,6 @@ img {
     color: #fff;
     font-size: 1.8rem;
     line-height: 2.5rem;
-}
-
-/* 代码高亮 */
-.highlight {
-    color: #fff;
 }
 .highlight pre .function .keyword,
 .highlight pre .constant {
