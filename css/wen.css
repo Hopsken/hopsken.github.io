@@ -216,7 +216,7 @@ a {
 }
 
 @media only screen and (max-width: 740px) {
-    .post {
+    .content > .post {
         width: 100%;
     }
     .post:nth-of-type(2) {
