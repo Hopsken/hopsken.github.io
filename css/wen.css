@@ -389,6 +389,7 @@ img {
     color: #fff;
     font-size: 1.8rem;
     line-height: 2.5rem;
+    font-weight: 300;
 }
 .highlight pre .function .keyword,
 .highlight pre .constant {
