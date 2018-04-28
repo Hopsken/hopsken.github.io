@@ -366,7 +366,7 @@ img {
 
 .article img {
     display: block;
-    max-width: 100%;
+    max-width: 70%;
     margin: 1rem auto;
 }
 
