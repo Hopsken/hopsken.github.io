@@ -369,7 +369,11 @@ img {
     max-width: 70%;
     margin: 1rem auto;
 }
-
+@media only screen and (max-width: 740px) {
+    img {
+        max-width: 100%;
+    }
+}
 .article p>code,
 .archive li>code,
 .archive a>code {
